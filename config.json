@@ -1,0 +1,35 @@
+{
+    "service": {
+      "api": "http",
+      "port": 8000,
+      "ip": "127.0.0.1",
+      "worker_threads": 4,
+      "worker_processes": 1,
+      "application": {
+        "content": "utf8"
+      }
+    },
+    "logging": {
+      "level": "info",
+      "output": "stderr",
+      "rotation": {
+        "size": 10485760,
+        "files": 5
+      }
+    },
+    "security": {
+      "csrf": {
+        "enable": true
+      }
+    },
+    "sessions": {
+      "backend": "threaded",
+      "timeout": 3600,
+      "cookie": {
+        "age": 3600,
+        "secure": false,
+        "httponly": true
+      }
+    }
+  }
+  
